@@ -24,7 +24,13 @@ void insert(){
         ptr->next=temp;
     }
 }
-
+void addToHead(){
+    struct Node* ptr=(struct Node*)malloc(sizeof(struct Node));
+    printf("Enter data to put to head");
+    scanf("%d",&ptr->data);
+    temp->next=head;
+    head=temp;
+}
 void display(){
     struct Node* start = head;
     while(start!=NULL){
