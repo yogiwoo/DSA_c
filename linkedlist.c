@@ -11,7 +11,7 @@ void insert(){
     struct Node* temp;
     temp=(struct Node*) malloc(sizeof(struct Node));
     printf("Enter node data");
-    scanf("%d",temp->data);
+    scanf("%d",&temp->data);
     if(head==NULL){
         head=temp;
     }
