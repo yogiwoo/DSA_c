@@ -31,6 +31,26 @@ void addToHead(){
     temp->next=head;
     head=temp;
 }
+void addToPos(){
+    int pos;
+    struct Node* temp=(struct Node*)malloc(sizeof(struct Node));
+    
+    printf("enter data to a specific position");
+    scanf("%d",&pos);
+    printf("enter data to add");
+    scanf("%d",&temp->data);
+    struct Node* x; //to store data at temp;
+    struct Node* ptr=head; //iterator
+    int counter=0;
+    while(counter<pos-1){
+        ptr=ptr->next;
+        counter++;
+    }
+    x=ptr->next;
+    temp->next=x;
+    ptr->next=temp;
+}
+
 void display(){
     struct Node* start = head;
     while(start!=NULL){
@@ -39,6 +59,8 @@ void display(){
     }
     printf("NULL");
 }
+
+
 int main(){
   insert();
   insert();
